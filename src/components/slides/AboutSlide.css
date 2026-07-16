@@ -1,0 +1,135 @@
+.about-slide {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+  position: relative;
+  overflow: hidden;
+  padding: 2rem;
+}
+
+.about-slide::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:
+    radial-gradient(circle at 30% 40%, rgba(139, 92, 246, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 70% 60%, rgba(59, 130, 246, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.about-content {
+  max-width: 900px;
+  width: 100%;
+  z-index: 1;
+  padding: 2rem;
+}
+
+.about-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.about-title {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-weight: 300;
+  letter-spacing: 0.08em;
+  margin: 0 0 1.5rem 0;
+  color: #f5f5f5;
+  font-family: 'Cinzel', 'Playfair Display', serif;
+}
+
+.about-divider {
+  height: 1px;
+  width: 200px;
+  background: linear-gradient(90deg, transparent, #8b5cf6, transparent);
+  margin: 0 auto;
+}
+
+.about-with-image {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+  width: 100%;
+}
+
+.trampoline-image {
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.trampoline-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.about-body {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.about-section {
+  text-align: left;
+}
+
+.section-title {
+  font-size: clamp(1.25rem, 2vw, 1.5rem);
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  margin: 0 0 1rem 0;
+  color: #8b5cf6;
+  font-family: 'Cinzel', 'Playfair Display', serif;
+}
+
+.section-text {
+  font-size: clamp(1rem, 1.5vw, 1.125rem);
+  line-height: 1.9;
+  color: #c0c0c0;
+  margin: 0;
+  font-weight: 300;
+}
+
+@media (max-width: 968px) {
+  .about-slide {
+    padding: 1rem;
+  }
+
+  .about-content {
+    padding: 1rem;
+  }
+
+  .about-header {
+    margin-bottom: 2rem;
+  }
+
+  .about-with-image {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .trampoline-image {
+    width: 100%;
+  }
+
+  .about-body {
+    gap: 2rem;
+  }
+
+  .about-section {
+    text-align: center;
+  }
+
+  .section-text {
+    text-align: left;
+  }
+}
